@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+Disallow: /*.json$
+Disallow: /search
+
+Crawl-delay: 1
+
+Sitemap: https://saude-bem-estar.com/sitemap.xml
