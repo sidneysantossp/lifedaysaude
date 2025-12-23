@@ -326,7 +326,7 @@ export default function AdminNewPost() {
 
       {/* Actions */}
       <div className="flex justify-end gap-4">
-        <Button variant="outline" asChild>
+        <Button variant="outline">
           <Link href="/admin/posts">Cancelar</Link>
         </Button>
         <Button>
