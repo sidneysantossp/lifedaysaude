@@ -132,6 +132,7 @@ export default function Home() {
               <Link href="/autores" className="text-sm font-medium hover:text-primary transition-colors">Autores</Link>
               <Link href="/sobre" className="text-sm font-medium hover:text-primary transition-colors">Sobre</Link>
               <Link href="/contato" className="text-sm font-medium hover:text-primary transition-colors">Contato</Link>
+              <Link href="/admin" className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded hover:bg-primary/20 transition-colors">Admin</Link>
             </nav>
 
             <div className="flex items-center space-x-4">
