@@ -332,7 +332,7 @@ export default function CategoriesPage() {
                       </div>
                     </div>
                   </div>
-                  <CardContent className="p-6">
+                  <CardContent className="pb-6 px-6">
                     <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
                       <Link href={`/categoria/${category.slug}`} className="block">
                         {category.name}
@@ -380,7 +380,7 @@ export default function CategoriesPage() {
                     </div>
                   )}
                 </div>
-                <CardContent className="p-4">
+                <CardContent className="pb-4 px-4">
                   <h3 className="font-bold mb-2 group-hover:text-primary transition-colors">
                     <Link href={`/categoria/${category.slug}`} className="block">
                       {category.name}
