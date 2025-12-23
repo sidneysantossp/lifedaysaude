@@ -238,6 +238,44 @@ export default function AdminPosts() {
         </Card>
       </div>
 
+      {/* Quick Actions */}
+      <Card>
+        <CardHeader>
+          <CardTitle>Ações Rápidas</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <Button asChild variant="outline" className="h-auto p-4 flex-col space-y-2">
+              <Link href="/admin/posts/new">
+                <Plus className="h-6 w-6" />
+                <span>Novo Artigo</span>
+              </Link>
+            </Button>
+            
+            <Button asChild variant="outline" className="h-auto p-4 flex-col space-y-2">
+              <Link href="/admin/posts?status=draft">
+                <FileText className="h-6 w-6" />
+                <span>Rascunhos</span>
+              </Link>
+            </Button>
+            
+            <Button asChild variant="outline" className="h-auto p-4 flex-col space-y-2">
+              <Link href="/admin/posts?featured=true">
+                <Eye className="h-6 w-6" />
+                <span>Em Destaque</span>
+              </Link>
+            </Button>
+            
+            <Button asChild variant="outline" className="h-auto p-4 flex-col space-y-2">
+              <Link href="/admin/posts?status=published">
+                <Calendar className="h-6 w-6" />
+                <span>Publicados</span>
+              </Link>
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+
       {/* Search and Filter */}
       <Card>
         <CardHeader>

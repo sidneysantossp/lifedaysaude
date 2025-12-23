@@ -224,6 +224,44 @@ export default function AdminCategories() {
         </Card>
       </div>
 
+      {/* Quick Actions */}
+      <Card>
+        <CardHeader>
+          <CardTitle>Ações Rápidas</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <Button asChild variant="outline" className="h-auto p-4 flex-col space-y-2">
+              <Link href="/admin/categories/new">
+                <Plus className="h-6 w-6" />
+                <span>Nova Categoria</span>
+              </Link>
+            </Button>
+            
+            <Button asChild variant="outline" className="h-auto p-4 flex-col space-y-2">
+              <Link href="/admin/categories?sort=posts">
+                <FileText className="h-6 w-6" />
+                <span>Mais Posts</span>
+              </Link>
+            </Button>
+            
+            <Button asChild variant="outline" className="h-auto p-4 flex-col space-y-2">
+              <Link href="/admin/categories?sort=recent">
+                <Calendar className="h-6 w-6" />
+                <span>Recentes</span>
+              </Link>
+            </Button>
+            
+            <Button asChild variant="outline" className="h-auto p-4 flex-col space-y-2">
+              <Link href="/admin/categories?sort=name">
+                <TrendingUp className="h-6 w-6" />
+                <span>Ordem Alfabética</span>
+              </Link>
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+
       {/* Search and Filter */}
       <Card>
         <CardHeader>

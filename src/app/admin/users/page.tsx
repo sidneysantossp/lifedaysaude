@@ -225,6 +225,44 @@ export default function AdminUsers() {
         </Card>
       </div>
 
+      {/* Quick Actions */}
+      <Card>
+        <CardHeader>
+          <CardTitle>Ações Rápidas</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <Button asChild variant="outline" className="h-auto p-4 flex-col space-y-2">
+              <Link href="/admin/users/new">
+                <Plus className="h-6 w-6" />
+                <span>Novo Usuário</span>
+              </Link>
+            </Button>
+            
+            <Button asChild variant="outline" className="h-auto p-4 flex-col space-y-2">
+              <Link href="/admin/users?role=admin">
+                <Shield className="h-6 w-6" />
+                <span>Administradores</span>
+              </Link>
+            </Button>
+            
+            <Button asChild variant="outline" className="h-auto p-4 flex-col space-y-2">
+              <Link href="/admin/users?status=active">
+                <ShieldCheck className="h-6 w-6" />
+                <span>Ativos</span>
+              </Link>
+            </Button>
+            
+            <Button asChild variant="outline" className="h-auto p-4 flex-col space-y-2">
+              <Link href="/admin/users?status=inactive">
+                <Clock className="h-6 w-6" />
+                <span>Inativos</span>
+              </Link>
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+
       {/* Search and Filter */}
       <Card>
         <CardHeader>

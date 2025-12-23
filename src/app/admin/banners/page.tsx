@@ -222,6 +222,44 @@ export default function AdminBanners() {
         </Card>
       </div>
 
+    {/* Quick Actions */}
+      <Card>
+        <CardHeader>
+          <CardTitle>Ações Rápidas</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <Button asChild variant="outline" className="h-auto p-4 flex-col space-y-2">
+              <Link href="/admin/banners/new">
+                <Plus className="h-6 w-6" />
+                <span>Novo Banner</span>
+              </Link>
+            </Button>
+            
+            <Button asChild variant="outline" className="h-auto p-4 flex-col space-y-2">
+              <Link href="/admin/banners?status=active">
+                <Monitor className="h-6 w-6" />
+                <span>Ativos</span>
+              </Link>
+            </Button>
+            
+            <Button asChild variant="outline" className="h-auto p-4 flex-col space-y-2">
+              <Link href="/admin/banners?status=scheduled">
+                <Calendar className="h-6 w-6" />
+                <span>Agendados</span>
+              </Link>
+            </Button>
+            
+            <Button asChild variant="outline" className="h-auto p-4 flex-col space-y-2">
+              <Link href="/admin/banners?position=home_hero">
+                <Smartphone className="h-6 w-6" />
+                <span>Home</span>
+              </Link>
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+
       {/* Search and Filter */}
       <Card>
         <CardHeader>
