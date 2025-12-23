@@ -312,11 +312,18 @@ export default function CategoriesPage() {
               {featuredCategories.map((category) => (
                 <Card key={category.id} className="group overflow-hidden hover:shadow-lg transition-all duration-300">
                   <div className="relative h-48">
-                    <div className={`absolute inset-0 ${category.color} opacity-10`}></div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div className="absolute inset-0">
+                      <Image
+                        src={category.image}
+                        alt={category.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                     <div className="absolute top-4 left-4">
                       <Badge className={`${category.color} text-white text-lg px-3 py-1`}>
-                        {category.icon} {category.name}
+                        {category.name}
                       </Badge>
                     </div>
                     <div className="absolute bottom-4 left-4 right-4">
@@ -367,10 +374,15 @@ export default function CategoriesPage() {
             {categories.map((category) => (
               <Card key={category.id} className="group overflow-hidden hover:shadow-lg transition-all duration-300">
                 <div className="relative h-32">
-                  <div className={`absolute inset-0 ${category.color} opacity-20`}></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-4xl">{category.icon}</span>
+                  <div className="absolute inset-0">
+                    <Image
+                      src={category.image}
+                      alt={category.name}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                   {category.trending && (
                     <div className="absolute top-2 right-2">
                       <Badge className="bg-red-500 text-white text-xs">
@@ -379,6 +391,11 @@ export default function CategoriesPage() {
                       </Badge>
                     </div>
                   )}
+                  <div className="absolute bottom-2 left-2">
+                    <Badge className={`${category.color} text-white text-xs px-2 py-1`}>
+                      {category.name}
+                    </Badge>
+                  </div>
                 </div>
                 <CardContent className="pb-4 px-4">
                   <h3 className="font-bold mb-2 group-hover:text-primary transition-colors">

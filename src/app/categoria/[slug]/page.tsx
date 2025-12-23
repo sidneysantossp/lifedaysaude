@@ -235,12 +235,16 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
                   <div className="md:flex">
                     <div className="md:w-2/5">
                       <div className="relative h-64 md:h-full">
-                        <div className={`absolute inset-0 ${categoryData.color} opacity-10`}></div>
+                        <div className="absolute inset-0">
+                          <Image
+                            src={categoryData.image}
+                            alt={categoryData.name}
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
                         <div className="absolute top-4 left-4">
                           <Badge className="bg-yellow-500 text-white">Destaque</Badge>
-                        </div>
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <span className="text-6xl opacity-20">{categoryData.icon}</span>
                         </div>
                       </div>
                     </div>
@@ -306,9 +310,13 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
                     <div className="md:flex">
                       <div className="md:w-1/3">
                         <div className="relative h-48 md:h-full">
-                          <div className={`absolute inset-0 ${post.category.color} opacity-10`}></div>
-                          <div className="absolute inset-0 flex items-center justify-center">
-                            <span className="text-5xl opacity-20">{categoryData.icon}</span>
+                          <div className="absolute inset-0">
+                            <Image
+                              src={categoryData.image}
+                              alt={post.category.name}
+                              fill
+                              className="object-cover"
+                            />
                           </div>
                         </div>
                       </div>
