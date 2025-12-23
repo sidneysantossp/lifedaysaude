@@ -9,6 +9,7 @@ import { Textarea } from '@/components/ui/textarea'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Switch } from '@/components/ui/switch'
 import { Badge } from '@/components/ui/badge'
+import ImageUpload from '@/components/ui/image-upload'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 export const metadata: Metadata = {
@@ -85,10 +86,13 @@ export default function AdminNewPost() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="coverImage">Imagem de Capa</Label>
-                <Input 
-                  id="coverImage" 
-                  placeholder="/caminho/da/imagem.jpg"
+                <Label>Imagem de Capa</Label>
+                <ImageUpload 
+                  placeholder="Arraste uma imagem ou clique para selecionar"
+                  onChange={(url) => {
+                    // Aqui você pode adicionar lógica para salvar a imagem
+                    console.log('Imagem selecionada:', url)
+                  }}
                 />
               </div>
 

@@ -10,6 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Switch } from '@/components/ui/switch'
 import { Badge } from '@/components/ui/badge'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import ImageUpload from '@/components/ui/image-upload'
 
 export const metadata: Metadata = {
   title: 'Editar Conteúdo - Painel Admin - if',
@@ -151,11 +152,14 @@ export default function AdminEditPost() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="coverImage">Imagem de Capa</Label>
-                <Input 
-                  id="coverImage" 
-                  defaultValue={postData.coverImage}
-                  placeholder="/caminho/da/imagem.jpg"
+                <Label>Imagem de Capa</Label>
+                <ImageUpload 
+                  value={postData.coverImage}
+                  placeholder="Arraste uma imagem ou clique para selecionar"
+                  onChange={(url) => {
+                    // Aqui você pode adicionar lógica para atualizar a imagem
+                    console.log('Imagem atualizada:', url)
+                  }}
                 />
               </div>
 

@@ -9,6 +9,7 @@ import { Textarea } from '@/components/ui/textarea'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Switch } from '@/components/ui/switch'
 import { Badge } from '@/components/ui/badge'
+import ImageUpload from '@/components/ui/image-upload'
 
 export const metadata: Metadata = {
   title: 'Novo Usuário - Painel Admin - if',
@@ -80,11 +81,17 @@ export default function AdminNewUser() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="title">Título Profissional</Label>
-                <Input id="title" placeholder="Ex: Dra. em Nutrição" />
+                <Label>Avatar</Label>
+                <ImageUpload 
+                  placeholder="Arraste uma imagem ou clique para selecionar"
+                  onChange={(url) => {
+                    console.log('Avatar selecionado:', url)
+                  }}
+                />
               </div>
+            </div>
 
-              <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-4 md:grid-cols-2">
                 <div className="space-y-2">
                   <Label htmlFor="credentials">Credenciais</Label>
                   <Input id="credentials" placeholder="Ex: CRM 12345" />
