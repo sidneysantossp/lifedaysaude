@@ -93,18 +93,18 @@ const categories = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Blog Saúde & Bem-Estar - Dicas para uma Vida Mais Saudável',
+  title: 'if - Saúde & Bem-Estar | Dicas para uma Vida Mais Saudável',
   description: 'Descubra as melhores dicas de saúde, bem-estar, nutrição e qualidade de vida. Guias completos sobre energia, imunidade, longevidade e muito mais.',
   keywords: ['saúde', 'bem-estar', 'energia', 'imunidade', 'longevidade', 'menopausa', 'sono', 'vitaminas', 'nutrição'],
   openGraph: {
-    title: 'Blog Saúde & Bem-Estar - Vida Mais Saudável',
+    title: 'if - Saúde & Bem-Estar',
     description: 'Aprenda a viver com mais saúde e qualidade de vida através de nossas dicas especializadas.',
     type: 'website',
     locale: 'pt_BR',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blog Saúde & Bem-Estar',
+    title: 'if - Saúde & Bem-Estar',
     description: 'Aprenda a viver com mais saúde e qualidade de vida através de nossas dicas especializadas.',
   },
   alternates: {
@@ -121,9 +121,9 @@ export default function Home() {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center">
-                <Heart className="w-5 h-5 text-white" />
+                <span className="text-white font-bold text-sm">if</span>
               </div>
-              <span className="text-xl font-bold">Saúde & Bem-Estar</span>
+              <span className="text-xl font-bold">if</span>
             </Link>
             
             <nav className="hidden md:flex items-center space-x-6">
@@ -462,12 +462,12 @@ export default function Home() {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center">
-                  <Heart className="w-5 h-5 text-white" />
+                  <span className="text-white font-bold text-sm">if</span>
                 </div>
-                <span className="text-xl font-bold">Saúde & Bem-Estar</span>
+                <span className="text-xl font-bold">if</span>
               </div>
               <p className="text-sm text-muted-foreground">
-                Seu guia completo para uma vida mais saudável e feliz através da nutrição, suplementação e hábitos conscientes.
+                Sua jornada para uma vida mais saudável e equilibrada.
               </p>
             </div>
             
@@ -502,7 +502,7 @@ export default function Home() {
           </div>
           
           <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
-            <p>© 2024 Saúde & Bem-Estar. Todos os direitos reservados. | As informações não substituem consulta médica.</p>
+            <p>&copy; 2024 if. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>
